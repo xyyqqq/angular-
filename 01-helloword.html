@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular hello world</title>
+        <style>
+       div{
+       	background-color: pink;
+       	margin: 0 auto;
+       	width: 600px;
+       	
+       }
+        </style>
+    </head>
+    <!--所有需要ng管理的代码在一个有ng-app指令的元素中
+    ng-app--是ng的一个入口，表示当前元素内所有的指令都会被angular管理（对每个指令进行分析和操作）
+    ng-init--数据的初试化
+    ng-model--做数据模型的绑定，即当前元素的value值与user.name建立绑定，当没有时，创建一个
+    {{user.name}}就是将NAME绑定到某个段落的innerHTML-->
+    <body >
+     <div ng-app ng-init="user.name='I love you'">
+     	<h1>使用 angular实现双边数据绑定</h1>
+     <p><input type="text" placeholder="你想说什么" ng-model="user.name"></p>
+     <p>我替你保密@@@<strong>{{user.name}}</strong></p>
+     </div>
+    <script src="bower_components/angular/angular.js" type="text/javascript"></script>
+    </body>
+</html>
